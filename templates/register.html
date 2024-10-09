@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+{% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+<!--<div class="site-blocks-cover overlay"  data-aos="fade" data-stellar-background-ratio="0.5">-->
+  <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+
+          <div class="col-md-10">
+
+            <div class="row justify-content-center mb-4">
+              <div class="col-md-10 text-center">
+                <h1></h1>
+
+                <!-- <h1 data-aos="fade-up" class="mb-5">Get  <span class="typed-words"></span></h1> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<br>
+<br>
+<br>
+
+    <div class="site-section bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7 mb-5"  data-aos="fade">
+
+
+
+            <form action="" class="p-5 bg-white" style="margin-top: -150px;" method="post">
+              {% csrf_token %}
+
+
+              <div class="row form-group">
+                <div class="col-md-6 mb-3 mb-md-0">
+                  <label class="text-black" for="name">Full Name</label>
+                  <input type="text" id="name" name="name" class="form-control" onfocus="this.placeholder = ''" onblur="this.placeholder = ''" autocomplete="off" onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="phone">Contact Number</label>
+                  <input type="text" id="phone" name="phone" class="form-control" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name'" pattern="[6-9]{1}[0-9]{9}" title="Enter 10 digit number"required>
+                </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="email">Email</label>
+                  <input type="email" id="email" name="email" class="form-control" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required>
+                  </div>
+              </div>
+
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="location">Location</label>
+                  <input type="text" id="location" name="location" class="form-control" onblur="validateInput()">
+                  </div>
+              </div>
+              <div class="row form-group">
+
+                <div class="col-md-12">
+                  <label class="text-black" for="password">Password</label>
+                  <input type="password" id="password" name="password" class="form-control" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" pattern = "[0-9]).{1,}[a-z]).{1,}[A-Z]).{8,}" title="Eight or more characters" required>
+                </div>
+              </div>
+
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Register Here" class="btn btn-pill btn-primary btn-md text-white">
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+          <div class="col-md-5"  data-aos="fade" data-aos-delay="100">
+            <a href="#" class="thumbnail-link d-block mb-4"><img src="{% static 'images/userreg.jpg' %}" alt="Image" class="img-fluid"></a>
+
+            <div class="p-4 mb-3 bg-white">
+
+
+            </div>
+
+            <div class="p-4 mb-3 bg-white">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function validateInput() {
+          var input = document.getElementById('myInput');
+          if (input.value.trim() !== input.value) {
+              alert('Leading white space is not allowed!');
+              input.value = input.value.trim(); // Remove leading white space
+              input.focus(); // Set focus back to the input field
+          }
+      }
+    </script>
+
+
+    {% endblock %}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="author" content="CodeHim">
+      <title> Rating Page</title>
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="{% static 'css6/style.css' %}">
+      <!-- Demo CSS (No need to include it into your project) -->
+      <link rel="stylesheet" href="{% static 'css6/demo.css ' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+   <style>
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+}
+
+  li {
+    float: end;
+  }
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* li a:hover:not(.active) {
+  background-color: #111;
+} */
+
+.active {
+  background-color: #04AA6D;
+}
+
+   </style>
+
+</head>
+   <body>
+  
+      <ul>
+      <!-- <li><a class="active" href="/user">Back To Home</a></li> -->
+      <li class="active"><a href="/user" class="nav-link"><span>Back To Home</span></a></li>
+    </ul>
+      <!--$%adsense%$-->
+      <main class="cd__main">
+         <!-- Start DEMO HTML (Use the following code into your project)-->
+         
+         <form action="" method="post">
+          {% csrf_token %}
+          <div class="wrapper">
+           
+          
+  <div class="title">Rate your experience</div>
+  
+  <div class="content">We highly value your feedback! Kindly take a moment to rate your experience and provide us with your valuable feedback.</div>
+  
+  <div class="rate-box">
+   
+    <input type="radio" name="star" id="star0" value="5star"/>
+    <label class="star" for="star0" >5star </label>
+    <input type="radio" name="star" id="star1" value="4star"/>
+    <label class="star" for="star1" >4star </label>
+    <input type="radio" name="star" id="star2" value="3star"/>
+    <label class="star" for="star2">3star </label>
+    <input type="radio" name="star" id="star3" value="2star"/>
+    <label class="star" for="star3">2star </label>
+    <input type="radio" name="star" id="star4" value="1star"/>
+    <label class="star" for="star4" >1star</label>
+  </div>
+  <label class="label" for="empl"></label>
+    
+    <select id="empl" name="empl" class="form-control px-3 py-6">
+      <option selected>Choose Therapists</option>
+      {% for i in empl %}
+      
+      <option value="{{i.id}}">{{i.name}} </option>
+    {% endfor %}
+    </select>
+  </label>
+  
+  <textarea name="comment" cols="30" rows="6" placeholder="Tell us about your experience!"></textarea>
+  
+  <br>
+  <!-- <div class="submit-btn"> -->
+    <button type="submit" class="submit-btn">Send Feedback</button>
+  </div>
+
+</div>
+</form>
+         <!-- END EDMO HTML (Happy Coding!)-->
+      </main>
+      <!-- <footer class="cd__credit">Author: Vivi Tseng - Distributed By: <a title="Free web design code & scripts" href="https://www.codehim.com?source=demo-page" target="_blank">CodeHim</a></footer> -->
+      
+      <!-- Script JS -->
+      <script src="{% static 'js6/script.js' %}"></script>
+      <!--$%analytics%$-->
+   </body>
+</html>

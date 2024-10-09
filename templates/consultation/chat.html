@@ -1,0 +1,49 @@
+<div class="col">
+
+        
+           
+    <div class="container-fluid border border-success rounded-lg" id="chat_window" style="background-color: #1423301a !important;">
+                
+     
+                        <div id="chat-body" class="panel panel-default">
+                            <center> <div class="panel-heading">Chat Box 
+                                     </div>  </center>
+
+                            <div id="msg-list-div" class="panel-body">
+                                        <ul id="msg-list" class="list-group">
+
+
+                                  {% include 'consultation/chat_body.html' %}
+
+              
+
+                                <script>
+                                        var chatlist = document.getElementById('msg-list-div');
+                                        chatlist.scrollTop = chatlist.scrollHeight;
+                                </script>
+                                                                              
+                                        </ul>
+
+                            </div>
+                            <br>
+
+
+                                <div id="chat-form" class="container-fluid">  {% csrf_token %}
+                                    <div id="chat-bottom" class="input-group">
+                                        <input type="text" id="chat-msg" name="chat-msg" class="form-control" placeholder="Type a message" />
+                                        
+                                    <div>
+                                            <input class="btn btn-primary" id="send" type="submit" value="Send"/>
+                                </div>
+                                        
+                                       
+                        </div>
+
+
+
+
+
+                
+
+     </div>  
+</div>  

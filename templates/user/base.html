@@ -1,0 +1,178 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <title>The Hope</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  </head>
+  <body>
+
+  	<div class="wrap">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 d-flex align-items-center">
+						<p class="mb-0 phone pl-md-2">
+							<a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> 918888000</a>
+							<a href="#"><span class="fa fa-paper-plane mr-1"></span> hope@email.com</a>
+
+						</p>
+					</div>
+					<div class="col-md-6 d-flex justify-content-md-end">
+						<div class="social-media">
+			    		<p class="mb-0 d-flex">
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+			    			<a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-dribbble"><i class="sr-only">Dribbble</i></span></a>
+			    		</p>
+		        </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="/user">Hope</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        <li class="nav-item active"><a href="/user" class="nav-link"><span>Home</span></a></li>
+            <li class="nav-item"><a href="ViewAllDepressions" class="nav-link"><span>View Depressions</span></a></li>
+            <li class="nav-item"><a href="search" class="nav-link"><span>Search Therapists</span></a></li>
+                <li class="nav-item"><a href="booked_therapy" class="nav-link"><span>Booked Therapists</span></a></li>
+                <!-- <li class="nav-item"><a href="enquiries" class="nav-link"><span>Solutions</span></a></li> -->
+                <li class="nav-item"><a href="feedback" class="nav-link"><span>Feedback</span></a></li>
+                <li class="nav-item"><a href="myprofile" class="nav-link"><i class='fa fa-user' style="font-size:25px;"></i><span>{{request.user.first_name}}</span></a></li>
+
+
+              <li class="nav-item"><a href="/" class="nav-link"><i class='fa fa-sign-out' style="font-size:25px;"></i><span>Logout</span></a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+
+
+{% block content %}
+	{% endblock %}
+
+
+
+  <footer class="ftco-footer">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-sm-12 col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2 logo"><a href="#">Hope</a></h2>
+            <p>Better life starts with counseling. Begin your journey today.</p>
+            <ul class="ftco-footer-social list-unstyled mt-2">
+              <li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Explore</h2>
+            <ul class="list-unstyled">
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>What We Do</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Plans &amp; Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Legal</h2>
+            <ul class="list-unstyled">
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Join us</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Privacy &amp; Policy</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Term &amp; Conditions</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+           <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Company</h2>
+            <ul class="list-unstyled">
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About Us</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Blog</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+              <li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Careers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon fa fa-map marker"></span><span class="text">Hope, Muvattupuzha , Kerala, India</span></li>
+                <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+                <li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">info@hope.com</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid px-0 py-5 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+            <p class="mb-0" style="color: rgba(255,255,255,.5);"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart color-danger" aria-hidden="true"></i> by <a href="/" target="_blank">Hope</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+
+  </body>
+</html>

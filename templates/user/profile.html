@@ -1,0 +1,98 @@
+<!-- HTML file for profile card display -->
+{% extends 'user/base.html' %}
+{% load static %}
+{% block content %}
+<br>
+<br>
+<br>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS file for styling profile card */
+        body {
+            background-image: url("{% static 'images/15.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+}
+.profile-card {
+    background-color:rgb(253, 236, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 350px;
+    margin:  auto;
+    height: 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 50px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+.gg-log-off {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid transparent
+}
+.gg-log-off::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    height: 8px;
+    width: 2px;
+    background: currentColor;
+    left: 5px;
+    bottom: 6px
+}
+
+    </style>
+</head>
+
+
+<body>
+    <div class="profile-card">
+        <!-- <img src="/media/{{profile.image}}" alt="Profile Picture"> -->
+        <div class="profile-info">
+            <h2>{{profile.name}}</h2>
+            <p>Email Id : {{profile.email}}</p>
+            <p>Contact : {{profile.phone}}</p>
+            <p>Location :{{profile.location}}</p>
+            <!-- <p style="text-align: center;"><a href="/" class="nav-link"><button class="btn-danger"><i class="gg-log-off"></i></button></a></p> -->
+           
+        </div>
+    </div>
+</body>
+<br>
+<br>
+</html>
+{% endblock %}

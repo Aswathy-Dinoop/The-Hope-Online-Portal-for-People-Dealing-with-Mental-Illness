@@ -1,0 +1,57 @@
+{% extends 'admin/base.html' %}
+{% load static %}
+{% block content %}
+
+    <section class="hero-wrap hero-wrap-5" style="background-image: url('{% static 'images/14.jpg' %}'); height: 150px;" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end">
+          <div class="col-md-12 ftco-animate pb-5">
+          	
+          </div>
+        </div>
+      </div>
+    </section>
+		
+			<div class="container">
+				
+								
+								</div>
+								
+								</div>
+								
+				          
+								</div>
+								
+				          </div>
+								</div>
+							</div>
+							<div class="row no-gutters">
+								<div class="col-md-10">
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<h3 class="mb-4">Add Category</h3>
+										
+					            
+					      		
+                                        {% if messages %}
+                                        <ul class="messages">
+                                            {% for message in messages %}
+                                            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                        {% endif %}
+								</div>
+								
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+
+    
+	{% endblock %}
+
+  

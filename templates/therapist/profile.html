@@ -1,0 +1,99 @@
+<!-- HTML file for profile card display -->
+{% extends 'therapist/base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS file for styling profile card */
+        body {
+background-image: url("https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+            /* background-color: rgb(88, 145, 103, 1); */
+}
+.profile-card {
+    background-color:rgb(253, 236, 214);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info h2 {
+    margin-bottom: 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+.gg-log-off {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    border-radius: 16px;
+    border: 2px solid;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid transparent
+}
+.gg-log-off::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 3px;
+    height: 8px;
+    width: 2px;
+    background: currentColor;
+    left: 5px;
+    bottom: 6px
+}
+
+    </style>
+</head>
+<br>
+
+<body>
+    <div class="profile-card">
+        <img src="/media/{{profile.image}}" alt="Profile Picture">
+        <div class="profile-info">
+            <h2 >{{profile.name}}</h2>
+            <p>Email Id : {{profile.email}}</p>
+            <p>Contact : {{profile.phone}}</p>
+            <p>Qualification : {{profile.quali}}</p>
+            <p>Experience : {{profile.exp}}</p>
+            <p>Hospital Name : {{profile.hname}}</p>
+            <p>Location :{{profile.location}}</p>
+            <p>Register Number :{{profile.regnum}}</p>
+            <p>Pincode :{{profile.pincode}}</p>
+            <a href="updateprofile?id={{profile.id}}"><button class="btn-success">Update Profile</button>
+            <!-- <p style="text-align: center;"><a href="/" class="nav-link"><button class="btn-danger"><i class="gg-log-off"></i></button></a></p> -->
+           
+        </div>
+    </div>
+</body>
+<br>
+<br>
+</html>
+{% endblock %}

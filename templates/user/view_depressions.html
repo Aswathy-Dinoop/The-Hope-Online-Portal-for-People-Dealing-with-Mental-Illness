@@ -1,0 +1,84 @@
+{% extends 'user/base.html' %}
+
+{% load static %}
+{% block content %}
+{% if message %}
+<script>
+alert("{{ message }}")
+</script>
+{% endif %}
+
+<!--<div class="site-section bg-light">-->
+<!--  <div class="container">-->
+<!--    <div class="row mb-5">-->
+<!--      <div class="col-md-12 text-center">-->
+<!--        <h2 class="site-section-heading text-center font-secondary">Depressions & Solutions</h2>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--<div class="block-services-1 py-5">-->
+<!--  <div class="container">-->
+<!--    <div class="row">-->
+<!--      {% for i in depre %}-->
+<!--      &lt;!&ndash; <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3"> &ndash;&gt;-->
+<!--        &lt;!&ndash; <h3 class="mb-3">What We Offer</h3> &ndash;&gt;-->
+<!--        &lt;!&ndash; <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia rerum, aliquid velit minima inventore ad consequatur accusamus dolor.</p> &ndash;&gt;-->
+<!--        &lt;!&ndash; <p><a href="#" class="d-inline-flex align-items-center block-service-1-more"><span>See all services</span> <span class="icon-keyboard_arrow_right icon"></span></a></p> &ndash;&gt;-->
+<!--      &lt;!&ndash; </div> &ndash;&gt;-->
+<!--      <div class="mb-4 mb-lg-0 col-sm-6 col-md-6 col-lg-3">-->
+<!--        <div class="block-service-1-card">-->
+<!--          <a href="#" class="thumbnail-link d-block mb-4"><img style="height: 220px; width: 200px;" src="{{i.image.url}}" alt="Image" class="img-fluid"></a>-->
+<!--          <h3 class="block-service-1-heading mb-3">{{i.name}}</h3>-->
+<!--          <div class="block-service-1-excerpt"><p>{{i.solutions}}</p></div>-->
+<!--          <p><a href="singlepageview?id={{i.id}}" class="d-inline-flex align-items-center block-service-1-more"><span>View more</span> <span class="icon-keyboard_arrow_right icon"></span></a></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      {% endfor %}-->
+<!--    </div>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--      </div>-->
+<!--      -->
+<!--      -->
+
+<section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+          	<!-- <span class="subheading">Blog</span> -->
+            <h2>Depressions</h2>
+          </div>
+        </div>
+        <div class="row d-flex">
+          {% for i in depre %}
+          <div class="col-md-4 d-flex ftco-animate">
+
+          	<div class="blog-entry justify-content-end">
+              <div class="text text-center">
+              	<a href="" class="block-20 img" style="background-image: url('{{i.image.url}}');">
+	              </a>
+	              <div class="text-center mb-2 d-flex align-items-center justify-content-center">
+<!--                	<div>-->
+<!--                		<span class="day">18</span>-->
+<!--                		<span class="mos">April</span>-->
+<!--                		<span class="yr">2020</span>-->
+<!--                	</div>-->
+                </div>
+                <h3 class="heading mb-3"><a href="#">{{i.name}}</a></h3>
+                <p>{{i.solutions}}</p>
+              </div>
+            </div>
+          </div>
+              {% endfor %}
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+  {% endblock %}
